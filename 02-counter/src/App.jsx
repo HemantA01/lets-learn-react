@@ -9,8 +9,21 @@ function App() {
   let [counter, setCounter] = useState(10);
   const addValue = () => {
     console.log('Add value button clicked. Counter is: ', counter)
+    if(counter >=20){
+      alert('Value can\'t exceed 20!')
+      return;
+    }
     counter += 2
     setCounter(counter)
+  }
+
+  const subtractValue = () => {
+    //counter -=2
+    if(counter <=0) {
+      alert('Value can\'t decrease more than 0!')
+      return;
+    }
+    setCounter(counter - 2)
   }
   return (
     <>
@@ -32,7 +45,7 @@ function App() {
           <button type="button" className="counter" onClick={addValue}>Increase Value</button>  
         </div>
         <div id="social">
-          <button type="button" className="counter">Decrease Value</button>
+          <button type="button" className="counter" onClick={subtractValue} disabled={counter === 0}>Decrease Value</button>
         </div>
       </section>
 
