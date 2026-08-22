@@ -1,4 +1,4 @@
-function LetsLearn(){
+function LetsLearn(){           //Component
     return(
         <h3>Let's continue learning React + Vite</h3>
     )
