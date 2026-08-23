@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({username, btnText="Visit Me"}){
+function Card({username, btnText="Visit Me"}){  //If "btnText" hasn't been passed from any component, default value will be displayed
     console.log(username)
     //Instead of using "username" directly, we can also use "props.username" defining "props" inside Card()
     return(
