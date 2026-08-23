@@ -13,8 +13,17 @@ function App() {
       alert('Value can\'t exceed 20!')
       return;
     }
-    counter += 2
-    setCounter(counter)
+    //counter += 2
+    //setCounter(counter + 2)
+    //Direct Update
+    //setCounter(counter + 2)
+    //setCounter(counter + 2)
+    //setCounter(counter + 2)
+    //Functional Update
+    setCounter(prevCounter => prevCounter + 2)
+    setCounter(prevCounter => prevCounter + 2)
+    setCounter(prevCounter => prevCounter + 2)
+    setCounter(prevCounter => prevCounter + 2)
   }
 
   const subtractValue = () => {
