@@ -7,13 +7,13 @@ import AddTodo from './components/AddTodo'
 import Todo from './components/Todo'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [editTodo, setEditTodo] = useState(null)
 
   return (
     <>
       <h1>Learn About Redux Toolkit</h1>
-      <AddTodo />
-      <Todo />
+      <AddTodo editTodo={editTodo} setEditTodo={setEditTodo} />
+      <Todo setEditTodo={setEditTodo} />
     </>
   )
 }
